@@ -1,19 +1,212 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FlyEasy</title>
-    </head>
-    <body>
-        <nav>
-            <div>
-                <img src="resources/FlyEasy.png" style="height: 100px;">
-                <ul>
-                    <li><a href='#'>Book Flights</a></li>
-                    <li><a href='#'>Check-In</a></li>
-                    <li><a href='#'>Status</a></li>
-                </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyEasy | Effortless Journeys</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <a href="index.html" class="logo-link">
+                    <img src="resources/FlyEasy.png" alt="FlyEasy Logo" class="brand-logo">
+                </a>
+                <div class="utility-nav">
+                    <a href="#"><i class="fas fa-globe"></i> EN</a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="#"><i class="fas fa-user"></i> Log In</a>
+                </div>
+                
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
             </div>
-        </nav>
-    </body>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="container">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#book" class="active">Book</a></li>
+                        <li><a href="#manage">Manage</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#where">Where we fly</a></li>
+                        <li><a href="#loyalty">Loyalty</a></li>
+                        <li><a href="#help">Help</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-content">
+            
+            <div class="hero-text">
+                <h1>Wake up in <br> <span class="highlight-text">Paradise</span></h1>
+                <p>Don't miss out on our Asia Flash Sale. 50% off ends soon.</p>
+            </div>
+
+            <div class="search-widget">
+                <input type="radio" name="search-tab" id="tab-flights" checked>
+                <input type="radio" name="search-tab" id="tab-manage">
+                <input type="radio" name="search-tab" id="tab-status">
+
+                <div class="widget-tabs">
+                    <label for="tab-flights"><i class="fas fa-plane"></i> Search flights</label>
+                    <label for="tab-manage"><i class="fas fa-suitcase"></i> Manage booking</label>
+                    <label for="tab-status"><i class="fas fa-clock"></i> Flight status</label>
+                </div>
+
+                <div class="tab-content content-flights">
+                    <form class="flight-form">
+                        <div class="input-group">
+                            <label>Departure Airport</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" placeholder="Trivandrum (TRV)" value="Thiruvananthapuram (TRV)">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Arrival Airport</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" placeholder="Where to?">
+                            </div>
+                        </div>
+                        <div class="input-group date-group">
+                            <label>Departure Date</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-search">Continue</button>
+                    </form>
+                </div>
+
+                <div class="tab-content content-manage">
+                    <div class="simple-form">
+                        <input type="text" placeholder="Booking Reference (e.g., K3J9L)">
+                        <input type="text" placeholder="Last Name">
+                        <button class="btn btn-search">Retrieve Booking</button>
+                    </div>
+                </div>
+
+                 <div class="tab-content content-status">
+                    <div class="simple-form">
+                        <input type="text" placeholder="Flight Number (e.g., FE102)">
+                        <button class="btn btn-search">Check Status</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations section-padding">
+        <div class="container">
+            <h2 class="section-heading">Featured Destinations <small>Explore the world with FlyEasy</small></h2>
+            
+            <div class="destination-grid">
+                <div class="dest-card">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop');">
+                        <div class="price-tag">From $399</div>
+                    </div>
+                    <div class="dest-info">
+                        <h3>Tokyo, Japan</h3>
+                        <p>Experience the perfect blend of tradition and future technology.</p>
+                        <a href="#" class="details-link">View Flights &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="dest-card">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=800&auto=format&fit=crop');">
+                        <div class="price-tag">From $249</div>
+                    </div>
+                    <div class="dest-info">
+                        <h3>Bangkok, Thailand</h3>
+                        <p>Immerse yourself in vibrant street life and ornate shrines.</p>
+                        <a href="#" class="details-link">View Flights &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="dest-card">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1504214208698-ea1916a2195a?q=80&w=800&auto=format&fit=crop');">
+                        <div class="price-tag">From $499</div>
+                    </div>
+                    <div class="dest-info">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Find your zen in the tropical paradise of islands.</p>
+                        <a href="#" class="details-link">View Flights &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features bg-light section-padding">
+        <div class="container">
+            <div class="features-flex">
+                <div class="feature-item">
+                    <div class="icon-circle"><i class="fas fa-chair"></i></div>
+                    <h3>Best-in-Class Comfort</h3>
+                    <p>Extra legroom on all economy flights.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-circle"><i class="fas fa-utensils"></i></div>
+                    <h3>Delicious Dining</h3>
+                    <p>Gourmet meals included in your fare.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-circle"><i class="fas fa-wifi"></i></div>
+                    <h3>Stay Connected</h3>
+                    <p>High-speed Wi-Fi available on board.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>FlyEasy</h2>
+                <p>Effortless Journeys.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>About Us</h4>
+                <a href="#">Careers</a>
+                <a href="#">Media Center</a>
+                <a href="#">Sustainability</a>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <a href="#">Help & Contact</a>
+                <a href="#">Travel Updates</a>
+                <a href="#">Special Assistance</a>
+            </div>
+            <div class="footer-links">
+                <h4>Book</h4>
+                <a href="#">Book Flights</a>
+                <a href="#">Travel Services</a>
+                <a href="#">Transportation</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FlyEasy Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
